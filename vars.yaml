@@ -1,0 +1,21 @@
+---
+nginx_controller_environmentName: "demo"
+api_gateway_instance: ""
+nginx_controller_gateway:
+  metadata:
+    name: "demo-api"
+    displayName: "Sports API gateways"
+  desiredState:
+    ingress:
+      uris:
+        "https://sports.example.com": {}
+      tls:
+        certRef:
+          ref: "/services/environments/{{nginx_controller_environmentName}}/certs/sports"
+        protocols:
+          - "TLSv1.3"
+      placement:
+        instanceRefs:
+          - ref: "/infrastructure/locations/unspecified/instances/{{api_gateway_instance}}"
+    errorSetRef:
+      ref: "/services/errorsets/default-json"
