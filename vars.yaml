@@ -1,6 +1,6 @@
 ---
 nginx_controller_environmentName: "demo"
-api_gateway_instance: ""
+api_gateway_instance: "ip-10-1-11-37.us-east-2.compute.internal"
 nginx_controller_gateway:
   metadata:
     name: "demo-api"
