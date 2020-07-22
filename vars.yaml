@@ -5,6 +5,8 @@ nginx_controller_gateway:
   metadata:
     name: "demo-api"
     displayName: "Sports API gateway"
+    tags:
+    - "api"
   desiredState:
     ingress:
       uris:
