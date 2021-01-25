@@ -1,6 +1,7 @@
 ---
 nginx_controller_environmentName: "demo"
-api_gateway_instance: "ip-10-2-10-74.us-west-2.compute.internal"
+api_gateway_instance_w: "ip-10-2-10-74.us-west-2.compute.internal"
+api_gateway_instance_e: "ip-10-20-10-150.us-east-2.compute.internal"
 nginx_controller_gateway:
   metadata:
     name: "demo-api"
@@ -18,6 +19,7 @@ nginx_controller_gateway:
           - "TLSv1.3"
       placement:
         instanceRefs:
-          - ref: "/infrastructure/locations/unspecified/instances/{{api_gateway_instance}}"
+          - ref: "/infrastructure/locations/aws_uswest2_demo/instances/{{api_gateway_instance_w}}"
+          - ref: "/infrastructure/locations/aws_useast2_demo/instances/{{api_gateway_instance_e}}"
     errorSetRef:
       ref: "/services/errorsets/default-json"
