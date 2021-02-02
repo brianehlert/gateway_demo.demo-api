@@ -8,7 +8,6 @@ nginx_controller_gateway:
     displayName: "Sports.com API gateway"
     tags:
     - "api"
-    - "demo"
   desiredState:
     ingress:
       uris:
