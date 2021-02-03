@@ -7,7 +7,6 @@ nginx_controller_gateway:
     name: "demo-api"
     displayName: "Sports.com API gateway"
     tags:
-    - "api"
     - "aws"
   desiredState:
     ingress:
