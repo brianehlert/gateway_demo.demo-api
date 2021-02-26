@@ -9,7 +9,6 @@ nginx_controller_gateway:
     tags:
     - "aws"
     - "api"
-    - "joe"
   desiredState:
     ingress:
       uris:
