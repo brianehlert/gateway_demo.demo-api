@@ -9,6 +9,7 @@ nginx_controller_gateway:
     tags:
     - "aws"
     - "api"
+    - "key:value"
   desiredState:
     ingress:
       uris:
